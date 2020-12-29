@@ -4,5 +4,8 @@
   "description": "Yet another awesome discord bot but this one dedicated to Oggy",
   "main": "main.js",
   "author": "Emre UYGUR",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
 }
