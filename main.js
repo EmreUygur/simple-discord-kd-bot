@@ -19,8 +19,19 @@ client.on("message", (msg) => {
   // Getting command from first argument
   const command = args.shift().toLocaleLowerCase();
 
-  if (command === "ping") {
-    msg.reply("pong");
+  switch (command) {
+    case "ping":
+      msg.reply("pong");
+      break;
+    case "kill":
+      break;
+    case "death":
+      break;
+    case "help":
+      break;
+    default:
+      msg.reply("invalid command");
+      break;
   }
 });
 
