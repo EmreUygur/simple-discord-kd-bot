@@ -11,29 +11,17 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on("message", (msg) => {
-  // Prevent bot's own messages
-  if (msg.author.bot) return;
-  // Prevent other bots
-  if (msg.content.indexOf(prefix) !== 0) return;
+fs.readdir("./events/", (err, files) => {
+  if (err) return console.error;
 
-  // Splitting arguments
-  const args = msg.content.slice(prefix.length).trim().split(/ +/g);
+  files.forEach((file) => {
+    if (!file.endsWith(".js")) return;
+    const evt = require(`./events/${file}`);
+    const evtName = file.split(".")[0];
+    console.log(`Loaded event: ${evtName}`);
 
-  // Getting command from first argument
-  const command = args.shift().toLocaleLowerCase();
-
-  // find command and its props by enmap
-  const cmd = client.commands.get(command);
-
-  // if no such command found
-  if (!cmd) {
-    msg.reply("Command not found");
-    return;
-  }
-
-  // run command
-  cmd.run(client, msg, args);
+    client.on(evtName, evt.bind(null, client));
+  });
 });
 
 fs.readdir("./commands/", (err, files) => {
