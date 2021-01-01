@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const Enmap = require("enmap");
 const fs = require("fs");
-const { token, prefix } = require("./config");
+const { token } = require("./config");
 
 const client = new Discord.Client();
 
