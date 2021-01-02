@@ -11,7 +11,8 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv-flow": "^3.2.0",
-    "enmap": "^5.8.2"
+    "enmap": "^5.8.2",
+    "fast-csv": "^4.3.6"
   },
   "devDependencies": {
     "eslint": "7.2.0",
