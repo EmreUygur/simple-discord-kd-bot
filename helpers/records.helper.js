@@ -5,8 +5,8 @@ const path = require("path");
 const filePath = path.join(__dirname, "../score-table.csv");
 
 /**
- * Fetchs records.txt file row by row
- * @returns {string[]} txt file rows inside array
+ * Fetchs score-table.csv file
+ * @returns {Buffer} - returns file data in buffer type
  */
 const fetchFile = () => {
   try {
@@ -17,6 +17,10 @@ const fetchFile = () => {
   }
 };
 
+/**
+ * Returns table data into array
+ * @returns {array | null} - returns array of data if success, returns null if error occurs
+ */
 const fetchCsvData = () =>
   new Promise((resolve, reject) => {
     const dataArr = [];
@@ -35,6 +39,11 @@ const fetchCsvData = () =>
       });
   });
 
+/**
+ * Adds new row to the table and overrides the data
+ * @param {array} row - row to be apended to file
+ * @returns {Promise<boolean>} - success status
+ */
 const addRow = async (row) => {
   const data = await fetchCsvData();
 
