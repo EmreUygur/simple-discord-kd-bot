@@ -1,7 +1,7 @@
 /**
  * Fetchs all users
  * @param {Guild} guild - discord guild
- * @returns { Promise<GuildMember>|Promise<Collection<Snowflake, GuildMember>>}
+ * @returns { Promise<Collection<Snowflake, GuildMember>>}
  */
 const fetchMembers = (guild) => {
   const members = guild.members.fetch();
@@ -9,6 +9,12 @@ const fetchMembers = (guild) => {
   return members;
 };
 
+/**
+ * Finds member by its tag
+ * @param {Guild} guild - discord guild
+ * @param {string} tag - discord user tag
+ * @returns { Promise<GuildMember>|undefined }
+ */
 const findMemberByTag = async (guild, tag) => {
   const members = await fetchMembers(guild);
 
