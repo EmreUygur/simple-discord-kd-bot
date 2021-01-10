@@ -3,7 +3,12 @@ const Enmap = require("enmap");
 const fs = require("fs");
 const { token } = require("./config");
 
-const client = new Discord.Client();
+const intents = new Discord.Intents([
+  Discord.Intents.NON_PRIVILEGED,
+  "GUILD_MEMBERS",
+]);
+
+const client = new Discord.Client({ ws: { intents } });
 
 client.commands = new Enmap();
 
