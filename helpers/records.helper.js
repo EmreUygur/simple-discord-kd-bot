@@ -41,7 +41,7 @@ const fetchCsvData = () =>
 
 /**
  * Adds new row to the table and overrides the data
- * @param {array} row - row to be apended to file
+ * @param {Object} row - row to be apended to file
  * @returns {Promise<boolean>} - success status
  */
 const addRow = async (row) => {
