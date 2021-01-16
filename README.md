@@ -28,10 +28,16 @@ Before get started, make sure that [yarn](https://classic.yarnpkg.com/en/docs/in
 
 ## Commands
 
-1. Run locally
+-Run in development
 
-   For development purposes
+Runs the bot locally in development enviroment
 
-   ```
-   yarn dev
-   ```
+```
+yarn dev
+```
+
+-Run in production
+
+```
+yarn start
+```
