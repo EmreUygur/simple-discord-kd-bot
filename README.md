@@ -23,8 +23,9 @@ Before get started, make sure that [yarn](https://classic.yarnpkg.com/en/docs/in
 
    ```
    cp .env.example .env
-   # DO NOT FORGET MODIFY .env FILE WITH YOUR INFORMATIONS
    ```
+   > DO NOT FORGET TO MODIFY THEM ACCORDING TO YOUR INFORMATIONS
+   
 
 ## Commands
 
