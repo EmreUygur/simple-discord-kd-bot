@@ -24,8 +24,14 @@ Before get started, make sure that [yarn](https://classic.yarnpkg.com/en/docs/in
    ```
    cp .env.example .env
    ```
+
    > DO NOT FORGET TO MODIFY THEM ACCORDING TO YOUR INFORMATIONS
-   
+
+4. Create an empty score-table.csv file
+
+   ```
+   echo > score-table.csv
+   ```
 
 ## Commands
 
