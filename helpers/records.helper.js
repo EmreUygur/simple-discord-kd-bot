@@ -12,7 +12,7 @@ const fetchFile = () => {
   try {
     return fs.readFileSync(filePath);
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return null;
   }
 };
@@ -34,7 +34,6 @@ const fetchCsvData = () =>
         dataArr.push(row);
       })
       .on("end", (rowCount) => {
-        console.log(`Parsed ${rowCount} rows`);
         resolve(dataArr);
       });
   });
@@ -56,7 +55,6 @@ const addRow = async (row) => {
         reject(false);
       })
       .on("finish", () => {
-        console.log("Row successfully added");
         resolve(true);
       });
   });
