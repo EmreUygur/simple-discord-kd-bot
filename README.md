@@ -1,3 +1,7 @@
-# Oggy-BOT
+# KD BOT For Discord
 
-Yet another awesome discord bot but this one dedicated to Oggy
+Yet another simple but awesome discord bot written by Discord.js to keep K/D stats
+
+## Installation
+
+Before get started, make sure that (yarn)[https://yarnpkg.com/getting-started/install] package manager is installed on your machine.
