@@ -61,3 +61,7 @@ The environment variables can be found and modified in the .env file.
 - PREFIX
 
   The character(s) that you want to use before writing bot command.
+
+## License
+
+[MIT](https://github.com/EmreUygur/simple-discord-kd-bot/blob/development/LICENSE)
