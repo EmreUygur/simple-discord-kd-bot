@@ -14,6 +14,7 @@ client.commands = new Enmap();
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setActivity(`${process.env.PREFIX}help`, { type: "LISTENING" });
 });
 
 fs.readdir("./events/", (err, files) => {
