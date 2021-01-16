@@ -1,7 +1,7 @@
 {
   "name": "simple-discord-kd-bot",
   "version": "1.0.0",
-  "description": "Yet another awesome discord bot which can keep users' kd data",
+  "description": "Yet another simple and awesome discord bot which can keep users' kd data",
   "main": "main.js",
   "author": "Emre UYGUR",
   "scripts": {
